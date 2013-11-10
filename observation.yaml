@@ -1,0 +1,102 @@
+###################
+# Observation log #
+###################
+# Notes
+#   * Keeping references across documents is against the YAML spec, but I'm doing it anyway [0]
+#
+# [0] http://code.google.com/p/snakeyaml/issues/detail?id=32
+###################
+
+#################################################################
+# Tanks                                                         #
+#################################################################
+--- # Aquarium on the bookshelf
+tank: &aq001
+dimensions:
+    - 5 gallons
+shape: hexigon
+material: plastic
+description:
+light:
+    - 10 Watt
+    - 150 milAmp
+    - fluorescent
+
+--- # Betta's bowl on the bookshelf
+tank: &aq002
+dimensions:
+    - 1 litter
+shape: cylinder
+
+--- # Betta bites
+feed: &feed001
+name: Betta Bites
+brand: HBH
+ingredients:
+    - fish meal
+    - shrip meal
+    - soybean meal
+
+#################################################################
+# Fish                                                          #
+#################################################################
+---
+Particle:
+    genus: betta
+    tank: *aq002
+    wikipedia: http://en.wikipedia.org/wiki/Betta
+Odo:
+    genus: Poecilia
+    common-name: Guppy
+    tank: *aq001
+    wikipedia: http://en.wikipedia.org/wiki/Guppy
+    notes: Named after chief security office Odo
+
+#################################################################
+# Logs                                                          #
+#################################################################
+#
+# A log entry is an associative array
+#
+# REQUIRED Attributes in a log
+# for - a tank reference
+# date - MM-DD-YYY
+# time - 24 hour clock time
+#
+#
+# SUGGESTED Attributes (at least one *is* required)
+# environment - An associative array of environmental conditions (ph, temp, etc.)
+# actions - A list of associative arrays
+
+--- # Log
+for: *aq001
+date: 11-9-2013
+time: 21:34
+environment:
+    temp: 79 F
+    ph: 6.6
+    nitrite: 0 ppm
+    ammonia: 0.1 ppm
+    nitrate: 0.5 ppm
+notes: >
+    The nitrate level was a bit higher than previous measurement but the ammonia level was down (I
+    don't have the numbers). This is a new tank so I am expecting this: ammonia probably was
+    converted to nitrate via the biofilter.
+
+--- # Log
+for: *aq002
+date: 11-9-2013
+time: 21:34
+environment:
+    temp: room temp
+    ph: 6.4
+    nitrite: 0 ppm
+    ammonia: 2 ppm
+    nitrate: 0.4 ppm
+actions:
+    - water-change:
+        volume: 225 ml
+        notes: 0.05 ml conditioner
+    - feed:
+        amount: 1 *feed001
+...
