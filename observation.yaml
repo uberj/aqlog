@@ -42,15 +42,38 @@ ingredients:
 #################################################################
 ---
 Particle:
-    genus: betta
+    genus: Betta
     tank: *aq002
     wikipedia: http://en.wikipedia.org/wiki/Betta
+    date-purchased: 10-1-2013
 Odo:
-    genus: Poecilia
     common-name: Guppy
+    name: Poecilia reticulata
     tank: *aq001
     wikipedia: http://en.wikipedia.org/wiki/Guppy
     notes: Named after chief security office Odo
+    date-purchased: 10-9-2013
+fern:
+    name: Microsorum pteropus
+    genus: Microsorum
+    common-name: Java Fern
+    tank: *aq001
+    wikipedia: http://en.wikipedia.org/wiki/Microsorum_pteropus
+    date-purchased: 11-10-2013
+Pete:
+    common-name: Guppy
+    name: Poecilia reticulata
+    tank: *aq001
+    wikipedia: http://en.wikipedia.org/wiki/Guppy
+    notes: Very orange
+    date-purchased: 10-9-2013
+Vic:
+    common-name: Guppy
+    name: Poecilia reticulata
+    tank: *aq001
+    wikipedia: http://en.wikipedia.org/wiki/Guppy
+    notes: Named after a hologram
+    date-purchased: 10-9-2013
 
 #################################################################
 # Logs                                                          #
@@ -99,4 +122,27 @@ actions:
         notes: 0.05 ml conditioner
     - feed:
         amount: 1 *feed001
+
+--- # Log
+for: *aq001
+date: 11-10-2013
+time: 11:11
+purchase:
+    - plant:
+        price: $6.25
+        notes: Java fern
+    - filter:
+        price: $4.00
+        notes: single pack
+    - fish:
+        guppy: $6.00
+        notes: two male guppies
+
+--- # Log
+for: *aq002
+date: 11-10-2013
+time: 11:11
+actions:
+    - feed:
+        amount: 6 *feed001
 ...
