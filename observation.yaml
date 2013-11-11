@@ -16,7 +16,10 @@ dimensions:
     - 5 gallons
 shape: hexigon
 material: plastic
-description:
+imgs:
+    - media/img/hex_tank.jpg
+    - media/img/hex_fish2_fern1.jpg
+    - media/img/hex_fish1.jpg
 light:
     - 10 Watt
     - 150 milAmp
