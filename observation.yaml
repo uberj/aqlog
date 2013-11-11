@@ -137,6 +137,9 @@ purchase:
     - fish:
         guppy: $6.00
         notes: two male guppies
+actions:
+    - salt:
+        volume: 1/2 teaspoon
 
 --- # Log
 for: *aq002
