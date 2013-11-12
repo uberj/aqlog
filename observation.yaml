@@ -14,6 +14,7 @@
 tank: &aq001
 dimensions:
     - 5 gallons
+    - 18927 milliliters
 shape: hexigon
 material: plastic
 imgs:
@@ -151,4 +152,21 @@ time: 11:11
 actions:
     - feed:
         amount: 6 *feed001
+
+--- # Log
+for: *aq001
+date: 11-11-2013
+time: 16:37
+environment:
+    temp: 78
+    ph: 6.4
+    nitrite: 0 ppm
+    ammonia: 0.5 ppm
+    nitrate: 5 ppm
+action:
+    - water-change:
+        volume: 5700 ml
+        notes: No conditioner. 30% water change
+    - salt:
+        volume: 1/6 teaspoon
 ...
