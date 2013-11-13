@@ -203,4 +203,13 @@ environment:
     nitrite: 0 ppm
     ammonia: 0 ppm
     nitrate: 5 ppm
+
+--- # Log
+for: *aq001
+date: 11-12-2013
+time: 16:42
+actions:
+    - feed:
+        amount: 2 flakes of *feed002
+        notes: I think 2 flakes is too much. I should try 1 flake next time.
 ...
