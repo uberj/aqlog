@@ -163,10 +163,26 @@ environment:
     nitrite: 0 ppm
     ammonia: 0.5 ppm
     nitrate: 5 ppm
+
+--- # Log
+for: *aq001
+date: 11-11-2013
+time: 16:50
 action:
     - water-change:
         volume: 5700 ml
         notes: No conditioner. 30% water change
     - salt:
         volume: 1/6 teaspoon
+
+--- # Log
+for: *aq001
+date: 11-12-2013
+time: 16:29
+environment:
+    temp: 76
+    ph: 6.6
+    nitrite: 0 ppm
+    ammonia: 0 ppm
+    nitrate: 5 ppm
 ...
