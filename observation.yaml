@@ -41,6 +41,15 @@ ingredients:
     - shrip meal
     - soybean meal
 
+--- # Tropical Flakes
+feed: &feed002
+name: Tetra Color Tropical Flakes
+brand: Tetra
+ingredients:
+    - fish meal
+    - dried yeast
+    - shrip meal
+
 #################################################################
 # Fish                                                          #
 #################################################################
@@ -152,6 +161,15 @@ time: 11:11
 actions:
     - feed:
         amount: 6 *feed001
+
+--- # Log
+for: *aq001
+date: 11-10-2013
+time: 11:11
+actions:
+    - feed:
+        amount: 4 flakes of *feed002
+notes: I removed Odo into his own bowl; he was being too agressive and nipping the other fish.
 
 --- # Log
 for: *aq001
