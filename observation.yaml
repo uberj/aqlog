@@ -187,4 +187,15 @@ action:
         notes: No conditioner. 30% water change
     - salt:
         volume: 1/6 teaspoon
+
+--- # Log
+for: *aq001
+date: 11-14-2013
+time: 19:28
+environment:
+    temp: 76
+    ph: 6.6
+    nitrite: 0 ppm
+    ammonia: 0 ppm
+    nitrate: 6 ppm
 ...
