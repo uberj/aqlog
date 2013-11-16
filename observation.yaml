@@ -212,4 +212,23 @@ actions:
     - feed:
         amount: 2 flakes of *feed002
         notes: I think 2 flakes is too much. I should try 1 flake next time.
+
+--- # Log
+for: *aq001
+date: 11-15-2013
+time: 18:19
+actions:
+    - feed:
+        amount: 1 flake of *feed002
+
+--- # Log
+for: *aq001
+date: 11-15-2013
+time: 18:22
+environment:
+    temp: 76
+    ph: 6.6
+    nitrite: 0 ppm
+    ammonia: 0 ppm
+    nitrate: 6 ppm
 ...
