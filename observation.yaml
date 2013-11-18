@@ -18,20 +18,10 @@ dimensions:
 shape: hexigon
 material: plastic
 imgs:
-    - media/img/hex_tank.jpg
-    - media/img/hex_fish2_fern1.jpg
-    - media/img/hex_fish1.jpg
 light:
     - 10 Watt
     - 150 milAmp
     - fluorescent
-
---- # Betta's bowl on the bookshelf
-tank: &aq002
-dimensions:
-    - 1 litter
-shape: cylinder
-
 --- # Betta bites
 feed: &feed001
 name: Betta Bites
@@ -59,34 +49,6 @@ Particle:
     tank: *aq002
     wikipedia: http://en.wikipedia.org/wiki/Betta
     date-purchased: 10-1-2013
-Odo:
-    common-name: Guppy
-    name: Poecilia reticulata
-    tank: *aq001
-    wikipedia: http://en.wikipedia.org/wiki/Guppy
-    notes: Named after chief security office Odo
-    date-purchased: 10-9-2013
-fern:
-    name: Microsorum pteropus
-    genus: Microsorum
-    common-name: Java Fern
-    tank: *aq001
-    wikipedia: http://en.wikipedia.org/wiki/Microsorum_pteropus
-    date-purchased: 11-10-2013
-Pete:
-    common-name: Guppy
-    name: Poecilia reticulata
-    tank: *aq001
-    wikipedia: http://en.wikipedia.org/wiki/Guppy
-    notes: Very orange
-    date-purchased: 10-9-2013
-Vic:
-    common-name: Guppy
-    name: Poecilia reticulata
-    tank: *aq001
-    wikipedia: http://en.wikipedia.org/wiki/Guppy
-    notes: Named after a hologram
-    date-purchased: 10-9-2013
 
 #################################################################
 # Logs                                                          #
@@ -103,132 +65,15 @@ Vic:
 # SUGGESTED Attributes (at least one *is* required)
 # environment - An associative array of environmental conditions (ph, temp, etc.)
 # actions - A list of associative arrays
-
---- # Log
-for: *aq001
-date: 11-9-2013
-time: 21:34
-environment:
-    temp: 79 F
-    ph: 6.6
-    nitrite: 0 ppm
-    ammonia: 0.1 ppm
-    nitrate: 0.5 ppm
-notes: >
-    The nitrate level was a bit higher than previous measurement but the ammonia level was down (I
-    don't have the numbers). This is a new tank so I am expecting this: ammonia probably was
-    converted to nitrate via the biofilter.
-
---- # Log
-for: *aq002
-date: 11-9-2013
-time: 21:34
-environment:
-    temp: room temp
-    ph: 6.4
-    nitrite: 0 ppm
-    ammonia: 2 ppm
-    nitrate: 0.4 ppm
-actions:
-    - water-change:
-        volume: 225 ml
-        notes: 0.05 ml conditioner
-    - feed:
-        amount: 1 *feed001
-
---- # Log
-for: *aq001
-date: 11-10-2013
-time: 11:11
-purchase:
-    - plant:
-        price: $6.25
-        notes: Java fern
-    - filter:
-        price: $4.00
-        notes: single pack
-    - fish:
-        guppy: $6.00
-        notes: two male guppies
-actions:
-    - salt:
-        volume: 1/2 teaspoon
-
---- # Log
-for: *aq002
-date: 11-10-2013
-time: 11:11
-actions:
-    - feed:
-        amount: 6 *feed001
-
---- # Log
-for: *aq001
-date: 11-10-2013
-time: 11:11
-actions:
-    - feed:
-        amount: 4 flakes of *feed002
-notes: I removed Odo into his own bowl; he was being too agressive and nipping the other fish.
-
+#
 --- # Log
 for: *aq001
 date: 11-11-2013
-time: 16:37
-environment:
-    temp: 78
-    ph: 6.4
-    nitrite: 0 ppm
-    ammonia: 0.5 ppm
-    nitrate: 5 ppm
-
---- # Log
-for: *aq001
-date: 11-11-2013
-time: 16:50
+time: 20:00
 action:
-    - water-change:
-        volume: 5700 ml
-        notes: No conditioner. 30% water change
-    - salt:
-        volume: 1/6 teaspoon
-
---- # Log
-for: *aq001
-date: 11-12-2013
-time: 16:29
-environment:
-    temp: 76
-    ph: 6.6
+    temp: 78
+    ph: 7
     nitrite: 0 ppm
-    ammonia: 0 ppm
-    nitrate: 5 ppm
-
---- # Log
-for: *aq001
-date: 11-12-2013
-time: 16:42
-actions:
-    - feed:
-        amount: 2 flakes of *feed002
-        notes: I think 2 flakes is too much. I should try 1 flake next time.
-
---- # Log
-for: *aq001
-date: 11-15-2013
-time: 18:19
-actions:
-    - feed:
-        amount: 1 flake of *feed002
-
---- # Log
-for: *aq001
-date: 11-15-2013
-time: 18:22
-environment:
-    temp: 76
-    ph: 6.6
-    nitrite: 0 ppm
-    ammonia: 0 ppm
-    nitrate: 6 ppm
+    ammonia: 1 ppm
+    nitrate: 0 ppm
 ...
