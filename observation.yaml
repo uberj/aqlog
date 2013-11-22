@@ -76,4 +76,16 @@ action:
     nitrite: 0 ppm
     ammonia: 1 ppm
     nitrate: 0 ppm
+
+--- # Log
+for: *aq001
+date: 11-22-2013
+time: 23:00
+action:
+    temp: 80
+    ph: 6.6
+    nitrite: 5 ppm
+    ammonia: 1 ppm
+    nitrate: 5 ppm
+    notes: nitrite was probably a little bit higher than 5 ppm, but 5 ppm is as high as the scale goes
 ...
