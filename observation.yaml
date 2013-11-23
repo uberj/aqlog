@@ -70,7 +70,7 @@ Particle:
 for: *aq001
 date: 11-11-2013
 time: 20:00
-action:
+environment:
     temp: 78
     ph: 7
     nitrite: 0 ppm
@@ -81,11 +81,31 @@ action:
 for: *aq001
 date: 11-22-2013
 time: 23:00
-action:
+environment:
     temp: 80
     ph: 6.6
     nitrite: 5 ppm
     ammonia: 1 ppm
     nitrate: 5 ppm
     notes: nitrite was probably a little bit higher than 5 ppm, but 5 ppm is as high as the scale goes
+
+--- # Log
+for: *aq001
+date: 11-23-2013
+time: 10:00
+    - water-change:
+        volume: 40%
+        notes: 5 drops of conditioner
+
+--- # Log
+for: *aq001
+date: 11-23-2013
+time: 14:04
+environment:
+    temp: 80
+    ph: 6.4
+    nitrite: 5 ppm
+    ammonia: 0.5 ppm
+    nitrate: 0.5 ppm
+    notes: nitriate was again off the scale.
 ...
