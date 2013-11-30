@@ -120,4 +120,26 @@ environment:
     ammonia: 0 ppm
     nitrate: 6 ppm
     notes: nitrite levels were off the scale again. Two hours prior to this I scrubbed algae off the side of the tank.
+
+--- # Log
+for: *aq001
+date: 11-30-2013
+time: 13:15
+environment:
+    temp: 74
+    ph: 6.4
+    nitrite: 5 ppm
+    ammonia: 0.1 ppm
+    nitrate: 10 ppm
+    notes: nitrite levels were off the scale again. I put new plants in yesterday.
+
+--- # Log
+for: *aq001
+date: 11-30-2013
+time: 13:25
+    - water-change:
+        volume: 40%
+        notes: 7 drops of conditioner
+
+
 ...
